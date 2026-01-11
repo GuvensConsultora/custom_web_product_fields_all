@@ -1,0 +1,15 @@
+<odoo>
+    <template id="product_fields_safe_render" inherit_id="website_sale.product">
+        <xpath expr="//div[@id='product_details']" position="inside">
+            <t t-foreach="product.website_product_field_ids" t-as="field">
+                <t t-set="value" t-value="getattr(product, field.name, False)"/>
+                <div class="product_field_line">
+                    <span class="label"><t t-esc="field.field_description"/>:</span>
+                    <span class="value">
+                        <t t-esc="value and (value.display_name if hasattr(value, 'display_name') else value) or ''"/>
+                    </span>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
