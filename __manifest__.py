@@ -1,6 +1,6 @@
 {
     "name": "Mostrar todos los campos adicionales del producto",
-    "version": "1.0",
+    "version": "18.0",
     "depends": ["website_sale"],
     "author": "Desarrollado para Crazy Compras",
     "category": "Website",
